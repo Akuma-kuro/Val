@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Week 2026 🌹</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Navigation Header -->
+        <header class="header">
+            <div class="container">
+                <h1 class="title">💕 Jaana, Gudiya - Valentine's Week 2026</h1>
+                <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem; margin-top: 10px;">A week of love, just for you 💌</p>
+                <div class="header-controls">
+                    <span id="current-date" class="date-display"></span>
+                    <div id="auth-status" class="auth-status">
+                        <span id="auth-message">Initializing...</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Day Navigation Tabs -->
+        <nav class="day-navigation">
+            <div class="nav-container">
+                <button class="nav-btn" data-day="rose">🌹 Rose</button>
+                <button class="nav-btn" data-day="propose">💍 Propose</button>
+                <button class="nav-btn" data-day="chocolate">🍫 Chocolate</button>
+                <button class="nav-btn" data-day="teddy">🧸 Teddy</button>
+                <button class="nav-btn" data-day="promise">🤝 Promise</button>
+                <button class="nav-btn" data-day="hug">🤗 Hug</button>
+                <button class="nav-btn" data-day="kiss">💋 Kiss</button>
+                <button class="nav-btn" data-day="valentine">💑 Valentine</button>
+            </div>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <div class="container">
+                <!-- Day Content Views -->
+                <div id="day-rose" class="day-view" style="display: none;">
+                    <div class="day-header">
+                        <h2>🌹 Rose Day - February 7</h2>
+                        <p class="day-description">Jaana, here's a rose to express my feelings for you</p>
+                    </div>
+                    <div class="day-content">
+                        <div class="rose-animation">
+                            <svg viewBox="0 0 100 100" class="rose-icon">
+                                <circle cx="50" cy="30" r="8" fill="#ff1744"/>
+                                <path d="M50 38 Q40 50 50 60 Q60 50 50 38" fill="#ff1744"/>
+                                <path d="M50 60 L50 85" stroke="#228B22" stroke-width="2" fill="none"/>
+                                <ellipse cx="45" cy="65" rx="3" ry="6" fill="#228B22"/>
+                                <ellipse cx="55" cy="72" rx="3" ry="6" fill="#228B22"/>
+                            </svg>
+                        </div>
+                        <div class="interaction-section">
+                            <input type="text" id="rose-message" class="message-input" placeholder="Tell her what this rose means to you...">
+                            <button id="rose-submit" class="submit-btn">Send Rose 🌹</button>
+                        </div>
+                        <div id="rose-messages" class="messages-list"></div>
+                    </div>
+                </div>
+
+                <div id="day-propose" class="day-view" style="display: none;">
+                    <div class="day-header">
+                        <h2>💍 Propose Day - February 8</h2>
+                        <p class="day-description">Gudiya, you mean everything to me. Let me tell you why</p>
+                    </div>
+                    <div class="day-content">
+                        <div class="ring-animation"></div>
+                        <div class="interaction-section">
+                            <input type="text" id="propose-message" class="message-input" placeholder="Write your proposal...">
+                            <button id="propose-submit" class="submit-btn">Propose 💍</button>
+                        </div>
+                        <div id="propose-messages" class="messages-list"></div>
+                    </div>
+                </div>
+
+                <div id="day-chocolate" class="day-view" style="display: none;">
+                    <div class="day-header">
+                        <h2>🍫 Chocolate Day - February 9</h2>
+                        <p class="day-description">My sweetness is nothing compared to you, Jaana</p>
+                    </div>
+                    <div class="day-content">
+                        <div class="chocolate-animation"></div>
+                        <div class="interaction-section">
+                            <input type="text" id="chocolate-message" class="message-input" placeholder="Write something sweet...">
+                            <button id="chocolate-submit" class="submit-btn">Give Chocolate 🍫</button>
+                        </div>
+                        <div id="chocolate-messages" class="messages-list"></div>
+                    </div>
+                </div>
+
+                <div id="day-teddy" class="day-view" style="display: none;">
+                    <div class="day-header">
+                        <h2>🧸 Teddy Day - February 10</h2>
+                        <p class="day-description">Gudiya, I wish I could hug you right now</p>
+                    </div>
+                    <div class="day-content">
+                        <div class="teddy-animation"></div>
+                        <div class="interaction-section">
+                            <input type="text" id="teddy-message" class="message-input" placeholder="Write a teddy note...">
+                            <button id="teddy-submit" class="submit-btn">Send Teddy 🧸</button>
+                        </div>
+                        <div id="teddy-messages" class="messages-list"></div>
+                    </div>
+                </div>
+
+                <div id="day-promise" class="day-view" style="display: none;">
+                    <div class="day-header">
+                        <h2>🤝 Promise Day - February 11</h2>
+                        <p class="day-description">I promise to always be there for you, Jaana</p>
+                    </div>
+                    <div class="day-content">
+                        <div class="promise-animation"></div>
+                        <div class="interaction-section">
+                            <input type="text" id="promise-message" class="message-input" placeholder="Make a promise...">
+                            <button id="promise-submit" class="submit-btn">Make Promise 🤝</button>
+                        </div>
+                        <div id="promise-messages" class="messages-list"></div>
+                    </div>
+                </div>
+
+                <div id="day-hug" class="day-view" style="display: none;">
+                    <div class="day-header">
+                        <h2>🤗 Hug Day - February 12</h2>
+                        <p class="day-description">Missing your warmth, Gudiya. Here's a virtual hug</p>
+                    </div>
+                    <div class="day-content">
+                        <div class="hug-animation"></div>
+                        <div class="interaction-section">
+                            <input type="text" id="hug-message" class="message-input" placeholder="Send a virtual hug...">
+                            <button id="hug-submit" class="submit-btn">Send Hug 🤗</button>
+                        </div>
+                        <div id="hug-messages" class="messages-list"></div>
+                    </div>
+                </div>
+
+                <div id="day-kiss" class="day-view" style="display: none;">
+                    <div class="day-header">
+                        <h2>💋 Kiss Day - February 13</h2>
+                        <p class="day-description">All my love and passion for you, Jaana 💕</p>
+                    </div>
+                    <div class="day-content">
+                        <div class="kiss-animation"></div>
+                        <div class="interaction-section">
+                            <input type="text" id="kiss-message" class="message-input" placeholder="Write something passionate...">
+                            <button id="kiss-submit" class="submit-btn">Send Kiss 💋</button>
+                        </div>
+                        <div id="kiss-messages" class="messages-list"></div>
+                    </div>
+                </div>
+
+                <div id="day-valentine" class="day-view" style="display: none;">
+                    <div class="day-header">
+                        <h2>💑 Valentine's Day - February 14</h2>
+                        <p class="day-description">Gudiya, you are my Valentine. Forever and always 💕</p>
+                    </div>
+                    <div class="day-content">
+                        <div class="valentine-animation"></div>
+                        <div class="interaction-section">
+                            <input type="text" id="valentine-message" class="message-input" placeholder="Express your love...">
+                            <button id="valentine-submit" class="submit-btn">Send Love 💑</button>
+                        </div>
+                        <div id="valentine-messages" class="messages-list"></div>
+                        <div id="final-summary" class="summary-section" style="display: none;"></div>
+                    </div>
+                </div>
+
+                <!-- Locked Day Placeholder -->
+                <div id="day-locked" class="day-view locked-view" style="display: none;">
+                    <div class="lock-icon">🔒</div>
+                    <h2>This day is locked</h2>
+                    <p id="unlock-message">Come back later to unlock this special day!</p>
+                </div>
+            </div>
+        </main>
+
+        <!-- Testing Mode Toggle (hidden) -->
+        <div class="testing-control" style="display: none;">
+            <button id="testing-toggle" class="testing-btn">🧪 Testing Mode</button>
+        </div>
+    </div>
+
+    <!-- Loading Spinner -->
+    <div id="loading-spinner" class="spinner" style="display: none;">
+        <div class="spinner-ring"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/config.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/github-api.js"></script>
+    <script src="js/day-rose.js"></script>
+    <script src="js/day-propose.js"></script>
+    <script src="js/day-chocolate.js"></script>
+    <script src="js/day-teddy.js"></script>
+    <script src="js/day-promise.js"></script>
+    <script src="js/day-hug.js"></script>
+    <script src="js/day-kiss.js"></script>
+    <script src="js/day-valentine.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
